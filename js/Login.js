@@ -6,7 +6,7 @@ const welcomUser = document.querySelector('.welcome-user');
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
 
-function LoginChk(e) {
+function LoginChk(e) { // form을 숨기고 username을 localstorage에 담고, 화면에 보여준다. 
   e.preventDefault();
   const nameValue = userName.value;
   loginFrm.classList.add(HIDDEN_CLASSNAME);
@@ -16,11 +16,11 @@ function LoginChk(e) {
   welcomUser.innerText = `Hello ${nameValue} 🖤`;
 }
 
-const getUserName = localStorage.getItem(USERNAME_KEY);
+const getUserName = localStorage.getItem(USERNAME_KEY); //localstorage에 담긴 username 을 가져온다
 
-if(getUserName === null) {
-  loginFrm.classList.remove(HIDDEN_CLASSNAME);
-  loginFrm.addEventListener('submit', LoginChk);
+if(getUserName === null) { // localstorage에 username이 없다면
+  loginFrm.classList.remove(HIDDEN_CLASSNAME); // form을 보여주고
+  loginFrm.addEventListener('submit', LoginChk); // form 작성 끝나면 LoginChk 실행
 } else {
   welcomUser.innerText = `Hello ${getUserName} 🖤`;
   welcomUser.classList.remove(HIDDEN_CLASSNAME);
