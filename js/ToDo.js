@@ -8,16 +8,23 @@ let arrList = [];
 
 function DeleteToDoList(e) {
   const li = e.target.parentElement; //list삭제 버튼의 부모element(li태그) 찾기 
-  li.id.remove;
-  console.log(li.id);
-
+  li.remove(); //화면에서의 삭제 
+  arrList.filter(item => item.id !== parseInt(li.id) ); // 배열 자체에서 삭제를 하기때문에 localstorage까지 id 삭제, li의id 는 stirng이여서 number로 바꿔줌
+  saveToDoList(); // filter를 통해 새로 만들어진 배열을 다시 localstorage에 저장 
 }
+
+// const arrId = arrList.filter(arrList => {
+//   if(DeleteToDoList.li.id === arrList.id) {
+//     console.log('id확인')
+
+//   }
+// });
 
 function saveToDoList() { // localstorage에 todolist 저장
-  localStorage.setItem(TODOS_KEY, JSON.stringify(arrList));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(arrList)); // localstorage에는 문자열만 저장가능, 배열을 문자열로 바꿔줌 JSON.stringify
 }
 
-function AddToDoList(newList) { // list를 li태그에 담고 화면에 보여줌
+function AddToDoList(newList) { // list를 li태그에 담고 화면에 보여줌, newList에 obj를 가져옴
   //🌈
   const liEl = document.createElement('li');
   liEl.id = newList.id;
@@ -36,13 +43,13 @@ function ToDOListSbm(e) {
   e.preventDefault();
   const listValue = toDoWirte.value; // 내가 input에 쓴 list
   toDoWirte.value = ""; //list 쓰고 엔터 누르면 input을 다시 비운다.
-  const toDoListObj = {
+  const toDoListObj = { 
     list : listValue,
     id : Date.now() // 밀리초로 각 list에 id 부여
   }
   arrList.push(toDoListObj); // 배열에 내가 작성한 list 담기 -> obj로 담기
   AddToDoList(toDoListObj); // 화면에 보여줄 함수에도 obj로 보내준다 (list를 보여주고 그 list에 id 값을 주기위해)
-  saveToDoList();
+  saveToDoList(); //localstorage에 list 저장 
 
 }
 
