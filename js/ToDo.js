@@ -9,16 +9,13 @@ let arrList = [];
 function DeleteToDoList(e) {
   const li = e.target.parentElement; //list삭제 버튼의 부모element(li태그) 찾기 
   li.remove(); //화면에서의 삭제 
-  arrList.filter(item => item.id !== parseInt(li.id) ); // 배열 자체에서 삭제를 하기때문에 localstorage까지 id 삭제, li의id 는 stirng이여서 number로 바꿔줌
+  console.log(typeof li.id)
+  arrList = arrList.filter((item) => item.id !== parseInt(li.id) ); // 배열 자체에서 삭제를 하기때문에 localstorage까지 id 삭제, li의id 는 stirng이여서 number로 바꿔줌
+  console.log(li)
+  console.log(typeof li.id)
+
   saveToDoList(); // filter를 통해 새로 만들어진 배열을 다시 localstorage에 저장 
 }
-
-// const arrId = arrList.filter(arrList => {
-//   if(DeleteToDoList.li.id === arrList.id) {
-//     console.log('id확인')
-
-//   }
-// });
 
 function saveToDoList() { // localstorage에 todolist 저장
   localStorage.setItem(TODOS_KEY, JSON.stringify(arrList)); // localstorage에는 문자열만 저장가능, 배열을 문자열로 바꿔줌 JSON.stringify
