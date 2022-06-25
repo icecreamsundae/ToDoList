@@ -1,0 +1,54 @@
+/* .onContainer {
+  display: flex;
+  justify-content: center;
+} */
+
+.onContainer .onInner {
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.onContainer .onInner .title {
+  color: violet;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+.onContainer .onInner .login {
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  border: 1px solid #000;
+}
+.onContainer .onInner .welcome-user {
+  margin-top: 10px;
+  color: violet;
+}
+
+.onContainer .onInner .to-do {
+}
+
+.onContainer .onInner .to-do .to-do-form {
+}
+.onContainer .onInner .to-do .to-do-form .write-todo {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.onContainer .onInner .to-do .to-do-form .write-todo:focus {
+  outline: none;
+  border-bottom: 1px solid #abe1f6;
+}
+.btn-toDo {
+  border: none;
+  background-color: #fff;
+}
