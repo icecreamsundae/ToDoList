@@ -1,6 +1,6 @@
 const toDoFrm = document.querySelector('.to-do-form');
-const toDoWirte = document.querySelector('.wirte-todo');
-const toDoList = document.querySelector('#todo-list');
+const toDoWirte = document.querySelector('.write-todo');
+const toDoList = document.querySelector('#toDos');
 const btnAdd = document.querySelector('.btn-add-list');
 
 const TODOS_KEY = 'saveToDos';
@@ -9,11 +9,7 @@ let arrList = [];
 function DeleteToDoList(e) {
   const li = e.target.parentElement; //list삭제 버튼의 부모element(li태그) 찾기 
   li.remove(); //화면에서의 삭제 
-  console.log(typeof li.id)
   arrList = arrList.filter((item) => item.id !== parseInt(li.id) ); // 배열 자체에서 삭제를 하기때문에 localstorage까지 id 삭제, li의id 는 stirng이여서 number로 바꿔줌
-  console.log(li)
-  console.log(typeof li.id)
-
   saveToDoList(); // filter를 통해 새로 만들어진 배열을 다시 localstorage에 저장 
 }
 
@@ -27,10 +23,19 @@ function AddToDoList(newList) { // list를 li태그에 담고 화면에 보여�
   liEl.id = newList.id;
   const sapnEl = document.createElement('span');
   sapnEl.innerText = newList.list;
+  const doneBtnEl = document.createElement('button');
   const btnEl = document.createElement('button');
-  btnEl.innerText = `🌈`;
+  btnEl.classList.add('btn-del');
+  doneBtnEl.classList.add('btn-done');
+  liEl.classList.add('to-do-list');
+  doneBtnEl.innerText = `Done!`;
+  btnEl.innerText = `Delete!`;
+  doneBtnEl.addEventListener('click', ()=> {
+    liEl.style.textDecoration = 'line-through';
+  })
   btnEl.addEventListener('click', DeleteToDoList); // 버튼 클릭시 삭제하는 함수 실행
   liEl.append(sapnEl);
+  liEl.append(doneBtnEl);
   liEl.append(btnEl);
   toDoList.append(liEl);
   

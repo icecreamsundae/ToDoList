@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/common.css">
   <script defer src="./js/App.js"></script>
   <script defer src="./js/ToDo.js"></script>
   <script defer src="./js/Login.js"></script>
@@ -12,18 +14,30 @@
 </head>
 <body>
   <div id="container">
-    <h1>LIFE IS SHORT, GO AFTER WHAT YOU LOVE</h1>
     <div class="inner">
-      <h2 id="clock">00:00:00</h2>
-      <form class="hidden login-form">
-        <input class="user-name" type="text" placeholder="NICKNAME" required />
-        <input class="btn-login" type="button" value="Login!" />
-      </form>
-      <h2 class="hidden welcome-user" ></h2>
-      <form class="to-do-form">
-        <input class="wirte-todo" type="text" placeholder="TO DO LIST" required />
-      </form>
-      <ul id="todo-list"></ul>
+      <h1 class="title">LIFE IS SHORT, GO AFTER WHAT YOU LOVE</h1>
+      <div class="login">
+        <form class="login-form hidden">
+          <input class="user-name" type="text" placeholder="NICKNAME" required />
+          <input class="btn-login" type="button" value="Login!" />
+        </form>
+        <h2 class="welcome-user hidden"></h2>
+      </div>
+      <div id="info">
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+        <div id="clock" class="hidden"></div>
+        <div id="calendar" class="hidden"></div>
+      </div>
+      <div class="to-do">
+        <form class="to-do-form hidden">
+          <input class="write-todo" type="text" maxlength="15" placeholder="TO DO LIST" required />
+        </form>
+        <ul id="toDos"></ul>
+        
+      </div>
     </div>
   </div>
 </body>
