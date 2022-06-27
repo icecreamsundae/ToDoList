@@ -26,7 +26,7 @@ function onGeolocation(position) {
   console.log(position);
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&untis=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
