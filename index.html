@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/common.css">
+  <title>To Do List</title>
   <script defer src="./js/App.js"></script>
   <script defer src="./js/ToDo.js"></script>
   <script defer src="./js/Login.js"></script>
-  <title>To Do List</title>
+  <script defer src="./js/Quotes.js"></script>
 </head>
 <body>
   <div id="container">
@@ -23,13 +24,17 @@
         </form>
         <h2 class="welcome-user hidden"></h2>
       </div>
-      <div id="info">
+      <div id="info" class="hidden">
         <div id="weather">
           <span></span>
           <span></span>
         </div>
-        <div id="clock" class="hidden"></div>
-        <div id="calendar" class="hidden"></div>
+        <div id="clock"></div>
+        <div id="calendar"></div>
+      </div>
+      <div id="quotes" class="hidden">
+        <span></span>
+        <span></span>
       </div>
       <div class="to-do">
         <form class="to-do-form hidden">
