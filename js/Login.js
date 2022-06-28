@@ -5,6 +5,9 @@ const welcomUser = document.querySelector('.welcome-user');
 const toDoFrmClassRemove = document.querySelector('.to-do-form');
 const clockClassRemove = document.querySelector('#clock');
 const calendarClassRemove = document.querySelector('#calendar');
+const titleClassRemove = document.querySelector('.title');
+const infoClassRemove = document.querySelector('#info');
+const quotesClassRemove = document.querySelector('#quotes');
 
 const divEl = document.querySelector('#container');
 const innerEl = document.querySelector('.inner');
@@ -21,8 +24,11 @@ function LoginChk(e) { // form을 숨기고 username을 localstorage에 담고, 
   welcomUser.classList.remove(HIDDEN_CLASSNAME);
   welcomUser.innerText = `Hi ${nameValue}`;
   toDoFrmClassRemove.classList.remove(HIDDEN_CLASSNAME);
-  clockClassRemove.classList.remove(HIDDEN_CLASSNAME);
-  calendarClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  // clockClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  // calendarClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  infoClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  quotesClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  titleClassRemove.classList.add(HIDDEN_CLASSNAME);
   divEl.classList.add('onContainer');
   innerEl.classList.add('onInner');
   innerEl.classList.remove('inner');
@@ -41,8 +47,11 @@ if(getUserName === null) { // localstorage에 username이 없다면
   welcomUser.innerHTML = welcomText
   welcomUser.classList.remove(HIDDEN_CLASSNAME);
   toDoFrmClassRemove.classList.remove(HIDDEN_CLASSNAME);
-  clockClassRemove.classList.remove(HIDDEN_CLASSNAME);
-  calendarClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  // clockClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  // calendarClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  infoClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  quotesClassRemove.classList.remove(HIDDEN_CLASSNAME);
+  titleClassRemove.classList.add(HIDDEN_CLASSNAME);
   divEl.classList.add('onContainer');
   innerEl.classList.add('onInner');
   innerEl.classList.remove('inner');
