@@ -2,10 +2,13 @@
 .hidden {
   display: none;
 }
-
+body {
+  background-color: #ebe9e9;
+}
 #container {
   display: flex;
   justify-content: center;
+
 }
 #container .inner {
   width: 500px;
@@ -19,7 +22,8 @@
 #container .inner .title {
   font-size: 15px;
   padding: 150px 0 80px;
-  color: #cf0c0c;
+  /* color: #cf0c0c; */
+  color: #b12424;
   font-weight: bold;
 }
 #container .inner .login {
@@ -31,25 +35,21 @@
 #container .inner .login .login-form .user-name {
   border: none;
   border-bottom: 1px solid #000;
+  color: #5c5a5a;
+  background-color: #ebe9e9;
 }
 #container .inner .login .login-form .user-name:focus {
   outline: none;
-  border-bottom: 1px solid #abe1f6;
+  border-bottom: 1px solid #858383;
 }
 #container .inner .login .login-form .btn-login {
   border: none;
-  background-color: #fff;
-  /* color: #abe1f6; */
-}
-#container .inner .login .welcome-user {
-
+  background-color: #ebe9e9;
+  color: #858383;
 }
 
-#container .inner .to-do {}
-#container #clock {}
-#container .inner .to-do .to-do-form {}
-#container .inner .to-do .to-do-form .write-todo {}
-#container #todo-list {}
+
+
 
 
 

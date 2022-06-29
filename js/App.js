@@ -30,8 +30,9 @@ function onGeolocation(position) {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
+      const temp = Math.floor(data.main.temp);
+      weather.innerText = `${data.weather[0].main}, ${temp}℃`;
       city.innerText = `${data.sys.country} ${data.name}`;
-      weather.innerText = `${data.main.temp}, ${data.weather[0].main}`;
     })
   
 }
