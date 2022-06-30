@@ -17,11 +17,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
+  background-color: rgb(133,131,131, .1);
+  border-radius: 45px;
 }
 
 #container .inner .title {
   font-size: 15px;
-  padding: 150px 0 80px;
+  padding: 40px 0 80px;
   /* color: #cf0c0c; */
   color: #b12424;
   font-weight: bold;
@@ -34,18 +37,20 @@ body {
 }
 #container .inner .login .login-form .user-name {
   border: none;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
   color: #5c5a5a;
   background-color: #ebe9e9;
 }
 #container .inner .login .login-form .user-name:focus {
   outline: none;
-  border-bottom: 1px solid #858383;
+  /* border-bottom: 1px solid #858383; */
 }
 #container .inner .login .login-form .btn-login {
   border: none;
   background-color: #ebe9e9;
-  color: #858383;
+  /* color: #858383; */
+  color: #b12424;
+  font-weight: bold;
 }
 
 

@@ -1,54 +1,210 @@
-/* .onContainer {
-  display: flex;
-  justify-content: center;
-} */
+.onContainer {
+}
 
 .onContainer .onInner {
   width: 1200px;
-  height: 600px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  border: 1px solid #000;
+  margin-top: 35px;
+  /* border: 1px solid #858383; */
+  background-color: rgb(133,131,131, .1);
+  border-radius: 45px;
+  box-sizing: border-box;
   position: relative;
 }
 
-.onContainer .onInner .title {
-  color: violet;
+/* username */
+.onContainer .onInner .welcome-user {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 5px;
-  left: 3px;
+  top: 20px;
+  right: 200px;
+  border-radius: 45px;
+  background-color: rgb(189,121,121, .3);
+  color: #858383;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+.onContainer .onInner .welcome-user span {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #b12424;
 }
 
-.onContainer .onInner .login {
-  width: 250px;
+/*시계, 달력, 날씨*/
+.onContainer .onInner #info {
+  /* width: 250px;
+  height: inherit; */
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+  /* border-left: 1px solid #858383; */
+  /* border: 1px solid red; */
+}
+.onContainer .onInner #info #weather {
+  width: 300px;
   height: 150px;
   position: absolute;
+  top: 90px;
+  right: 200px;
+  border-radius: 45px;
+  background-color: rgb(189,121,121, .3);
+}
+.onContainer .onInner #info #weather span:first-child { /*온도*/
+  position: absolute;
+  top: 25px;
+  right: 34%;
+  color: #858383;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.onContainer .onInner #info #weather span:last-child { /*도시*/
+  position: absolute;
+  bottom: 20px;
+  right: 38%;
+  color: #858383;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.onContainer .onInner #info #clock {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  right: 200px;
+  color: #858383;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 50px;
+  background-color: rgb(189,121,121, .3);
+
+}
+
+.onContainer .onInner #info #calendar {
+  width: 170px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 75px;
+  right: 320px;
+  color: #858383;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 45px;
+  background-color: rgb(189,121,121, .3);
+
+}
+
+/* Quotes */
+#quotes {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  position: absolute;
+  top: 270px;
+  right: 200px;
+  font-weight: 800;
+  border-radius: 45px;
+  background-color: rgb(189,121,121, .3);
+
+}
+#quotes span:first-child {
+  position: absolute;
   top: 40px;
-  left: 15px;
-  border: 1px solid #000;
+  left: 10px;
+  margin-right: 5px;
+  color: #5c5a5a;
+  font-size: 17px;
 }
-.onContainer .onInner .welcome-user {
-  margin-top: 10px;
-  color: violet;
+#quotes span:last-child {
+  position: absolute;
+  bottom: 30px;
+  right: 20%;
+  color: #5c5a5a;
+  font-size: 13px;
+
 }
 
-.onContainer .onInner .to-do {
-}
 
+/*to do form*/
+.onContainer .onInner .to-do { 
+  width: 450px;
+  height: 600px;
+  /* border: 1px solid #5c5a5a; */
+  border-radius: 45px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background-color: rgb(189,121,121, .3);
+  
+}
 .onContainer .onInner .to-do .to-do-form {
 }
 .onContainer .onInner .to-do .to-do-form .write-todo {
+  margin-top: 25px;
+  margin-left: 45px;
   border: none;
-  border-bottom: 1px solid #000;
+  border-radius: 45px;
+  color: #2c2c2c;
+  background-color: #ebe9e9;
 }
 .onContainer .onInner .to-do .to-do-form .write-todo:focus {
   outline: none;
-  border-bottom: 1px solid #abe1f6;
+  border-radius: 45px;
+  /* border-bottom: 1px solid #858383; */
+  background-color: rgb(196, 161, 161);
 }
-.btn-toDo {
+
+/*to do list*/
+#toDos{
+}
+#toDos .to-do-list {
+  padding-top:15px; 
+  position: relative;
+
+  
+}
+#toDos .to-do-list span{
+  color: #5c5a5a;
+  font-weight: 700;
+  margin-left: 45px;
+
+}
+#toDos .to-do-list .btn-done {
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  border-radius: 45px;
+}
+#toDos .to-do-list .btn-del {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  border-radius: 45px;
+
+}
+#toDos .to-do-list .btn-del,.btn-done {
   border: none;
-  background-color: #fff;
+  background-color: #ebe9e9;
+  padding-right: 5px;
+  color: #b12424;
+  font-weight: bold;
 }

@@ -22,7 +22,7 @@ function LoginChk(e) { // form을 숨기고 username을 localstorage에 담고, 
   localStorage.setItem(USERNAME_KEY, nameValue); //localstorage에 username 저장
   loginFrm.classList.add(HIDDEN_CLASSNAME);
   welcomUser.classList.remove(HIDDEN_CLASSNAME);
-  welcomUser.innerText = `Hi ${nameValue}`;
+  welcomUser.innerText = `HELLO! ${nameValue} `;
   toDoFrmClassRemove.classList.remove(HIDDEN_CLASSNAME);
   // clockClassRemove.classList.remove(HIDDEN_CLASSNAME);
   // calendarClassRemove.classList.remove(HIDDEN_CLASSNAME);
@@ -43,7 +43,7 @@ if(getUserName === null) { // localstorage에 username이 없다면
 
 } else {
   //🤎💝
-  const welcomText = `Hi <span>${getUserName}~ </span>`;
+  const welcomText = `HELLO! <span>${getUserName} </span>`;
   welcomUser.innerHTML = welcomText
   welcomUser.classList.remove(HIDDEN_CLASSNAME);
   toDoFrmClassRemove.classList.remove(HIDDEN_CLASSNAME);
